@@ -1,0 +1,20 @@
+Fade in images after they are fully loaded.
+
+   Images must have their intended src attribute set as attribute data-src
+      and have an empty or placeholder src attr. As always, set width and
+      height attributes on images to maintain page layout as they load.
+
+   Takes an options object which effects how the images fades in. It supports
+      all the properties defined here:
+      http://api.jquery.com/animate/
+   Default duration is 0 to help performace.
+
+   Usage Examples:
+     $('img').cleanLoad();
+
+     $('img.large').cleanLoad({
+                       duration: 'slow',
+                       easing: 'swing',
+                       complete: function (){ console.log("complete."); }
+                    });
+
