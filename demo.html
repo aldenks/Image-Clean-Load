@@ -2,19 +2,23 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>The HTML5 Herald</title>
-    <link rel="stylesheet">
+    <title>Img Clean Load</title>
+    <style type="text/css">
 
+        #main img {
+            height: 200px;
+            width: 300px;
+            float: left;
+        }
 
-
-    </link>
+    </style>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
 <body>
     <script src="jquery-1.7.1.js" type="text/javascript"></script>
-    <script src="jquery.cleanload.js" type="text/javascript></script>
+    <script src="jquery.cleanload.js" type="text/javascript"></script>
 
     <div id="main">
         <img data-src="http://2.bp.blogspot.com/_2R6necH_tm4/TL1Ua0PirSI/AAAAAAAAFAM/LDbA64FdEgs/s1600/oct16.jpg" />
@@ -30,6 +34,14 @@
  <img data-src="http://wallpapers.free-review.net/wallpapers/15/Deep_Sea_3D_-_Dolphin_Discovery.jpg" />
  <img data-src="http://th04.deviantart.net/fs7/PRE/i/2005/203/4/4/Prairie_Sunset_by_mcleodan.jpg" />
     </div>
+
+    <script type="text/javascript">
+        jQuery(function ($) {
+                $('#main img').cleanLoad();
+
+        });
+
+    </script>
 
 
 </body>
