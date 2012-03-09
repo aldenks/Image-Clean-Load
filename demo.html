@@ -6,8 +6,8 @@
     <style type="text/css">
 
         #main img {
-            height: 200px;
-            width: 300px;
+            height: 400px;
+            width: 600px;
             float: left;
         }
 
@@ -37,7 +37,11 @@
 
     <script type="text/javascript">
         jQuery(function ($) {
-                $('#main img').cleanLoad();
+                $('#main img').cleanLoad({
+                    duration: 'fast',
+                    easing: 'swing',
+                    complete: function (){ console.log("complete."); }
+                });
 
         });
 
