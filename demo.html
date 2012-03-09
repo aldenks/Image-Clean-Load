@@ -38,9 +38,15 @@
     <script type="text/javascript">
         jQuery(function ($) {
                 $('#main img').cleanLoad({
-                    easing: 'swing',
+                    duration: 400,
                     complete: function (){ console.log("complete."); }
                 });
+
+                /* What it would look like without cleanload
+                $('#main img').each(function () {
+                    $(this).attr( 'src', $(this).attr('data-src') );
+                });
+                */
         });
     </script>
 
